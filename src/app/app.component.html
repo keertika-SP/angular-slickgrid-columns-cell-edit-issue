@@ -1,0 +1,44 @@
+ 
+
+    <div class="row col-sm-12">
+     <div class="row col-sm-12">
+        <span style="margin-left: 15px">
+            <button class="btn btn-default btn-sm" 
+            style="background-color:lightgreen" (click)="addColumns()">
+               1.1 - Add Column (as recommended)
+            </button>
+        </span>
+    </div>
+        <div class="row col-sm-12">
+     <div class="row col-sm-12">
+        <span style="margin-left: 15px">
+            <button class="btn btn-default btn-sm" 
+            style="background-color:lightgreen" (click)="deleteColumns()">
+               1.2 - Delete last Column (as recommended)
+            </button>
+        </span>
+    </div>
+         <div class="row col-sm-12">
+        <span style="margin-left: 15px">
+            <button class="btn btn-default btn-sm" style="background-color:pink"(click)="toggleColumns()">
+               2.1 - Toggle More / Less Columns
+            </button>
+            <span style="font-weight: bold;">: {{ showMoreFields ? 'More' : 'Less' }}</span>
+        </span>
+    </div>
+    <div class="row col-sm-12">
+        <span style="margin-left: 15px">
+            <button class="btn btn-default btn-sm" 
+            style="background-color:pink"
+            (click)="enableCheckboxSelector()">
+               2.2 - enableCheckboxSelector
+            </button>
+            <span style="font-weight: bold;"> {{isEnableCheckboxSelector}}</span>
+        </span>
+    </div>
+ <angular-slickgrid gridId="grid2" style="width:95%;"
+                [columnDefinitions]="columnDefinitions"
+                [gridOptions]="gridOptions"
+                [dataset]="dataset"
+                (onAngularGridCreated)="angularGridReady($event)">
+ </angular-slickgrid>
